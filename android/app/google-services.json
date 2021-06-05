@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "5054206938",
+    "project_id": "task-manager-flutter-ap",
+    "storage_bucket": "task-manager-flutter-ap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5054206938:android:cc25b57831176185cba6e3",
+        "android_client_info": {
+          "package_name": "com.example.task2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5054206938-rq6g9ml7or1er478f4iels2nr0bb78lq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBboytYyzS8VT9BjzGpkk-dtmbpEPRP75o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5054206938-rq6g9ml7or1er478f4iels2nr0bb78lq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5054206938:android:7504fc5dcbb5865bcba6e3",
+        "android_client_info": {
+          "package_name": "com.example.task_manager_ap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5054206938-dfc2g201d4fag344c9pph5m6qqle13d1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.task_manager_ap",
+            "certificate_hash": "438f240b175b7fef29937c1a606ece38775f975a"
+          }
+        },
+        {
+          "client_id": "5054206938-rq6g9ml7or1er478f4iels2nr0bb78lq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBboytYyzS8VT9BjzGpkk-dtmbpEPRP75o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5054206938-rq6g9ml7or1er478f4iels2nr0bb78lq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
