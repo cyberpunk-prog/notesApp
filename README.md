@@ -25,4 +25,4 @@ Add details to your notes
 Notes added to landing page
 
 ![image](https://user-images.githubusercontent.com/68404906/120923142-a05c9100-c6ea-11eb-9880-707cdd56c5ee.png)
-
+![image](https://user-images.githubusercontent.com/68404906/120924306-a5244380-c6f0-11eb-9199-5adb997f5b6a.png)
