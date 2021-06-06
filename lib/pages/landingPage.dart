@@ -38,6 +38,9 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('List of Task'),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('adding task');
@@ -47,6 +50,76 @@ class _LandingPageState extends State<LandingPage> {
           );
         },
         child: Icon(Icons.edit),
+      ),
+      body: StreamBuilder<QuerySnapshot>(
+        stream: _firestore.collection('users2').snapshots(),
+        builder: (context, snapshot) {
+          var messageTitle, messageBody, messageUser;
+          List<Widget> messageWidgets = [];
+          if (snapshot.hasData) {
+            final messages = snapshot.data!.docs.reversed;
+
+            for (var message in messages) {
+              messageTitle = message.get('title');
+              messageBody = message.get('body');
+              messageUser = message.get('user');
+              // final messageWidget = Text(
+              //     'title: $messageTitle, body: $messageBody by-$messageUser ');
+              if (loggedInUser.email == messageUser)
+                messageWidgets.add(
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black)),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Center(
+                              child: Text(
+                            messageTitle,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 20),
+                          )),
+                          Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.black),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              height: 200,
+                              child: ListView(children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(horizontal: 8),
+                                  child: Text(messageBody),
+                                )
+                              ]),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              height: 30,
+                              child: Text('- $messageUser'),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+            }
+          } else {
+            return CircularProgressIndicator();
+          }
+          return ListView(
+            children: messageWidgets,
+            // padding: EdgeInsets.symmetric(vertical: 20),
+          );
+        },
       ),
     );
   }
